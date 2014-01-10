@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="css/g.css">
+	<script type="text/javascript" src="lib/angular-1.2.7/angular.js"></script>
+</head>
+<body ng-app>
+	<div class="header">
+		<p class="logo"><a href='/'>angular example</a></p>
+	</div>
+	<div class="Bdy">
+		<form class="form">
+			<div class="formItem">
+				<input type="text" class="txt" ng-model="username" placeholder="用户名">
+			</div>
+			<div class="formItem">
+				<input type="password" class="txt" ng-model="password" placeholder="密码">
+			</div>
+			<div class="formItem">
+				<input type="submit" class="btn" value="注册">
+			</div>
+		</form>
+		<div class="pre">
+			<p class="preItem">您输入的用户名：<b>{{username}}</b></p>
+			<p class="preItem">您输入的密码：<b>{{password}}</b></p>
+		</div>
+	</div>
+</body>
+</html>

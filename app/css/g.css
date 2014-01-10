@@ -1,0 +1,17 @@
+* {margin:0;padding:0}
+html {font:12px/1.667 'Helvetica Neue',Tahoma;color:#455469;background-color:whitesmoke}
+.header {height:40px;line-height:40px;background-color:#25AB5E;color:#fff;}
+.logo {margin-left:20px;color:#fff;}
+.logo a {color:#fff;font-size:16px;}
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+.form {border: 1px solid #ccc; width: 350px;margin: 20px auto;} 
+.formItem {margin:15px;width:200px;padding:10px;margin:auto;}
+.txt {height:19px;line-height:19px!important;padding:3px 4px 2px;border:1px solid #e8e4d8;border-radius:3px;}
+.btn {position: relative;overflow:visible;width:auto;-moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; text-indent: 0; outline: 0;border: 0;display: inline-block; height: 29px; line-height: 29px; line-height: 32px\9; padding: 0 21px; font-size: 12px; text-align: center; vertical-align: middle; white-space: nowrap; background: #25ab5e; color: #fff; cursor: pointer; border-radius: 3px; text-shadow: 0 1px 1px rgba(0,0,0,.15); -webkit-transition: all 0.2s; transition: all 0.2s;}
+.btn:hover {text-decoration: none; background: #2CC36C;}
+.btn:active {background: #455469; }
+
+.pre {border-top:1px solid #999;}
+.preItem {margin:10px;}
