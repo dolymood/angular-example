@@ -8,9 +8,12 @@ a:hover {text-decoration:underline;}
 
 .form {border: 1px solid #ccc; width: 350px;margin: 20px auto;} 
 .formItem {margin:15px;width:200px;padding:10px;margin:auto;}
-.txt {height:19px;line-height:19px!important;padding:3px 4px 2px;border:1px solid #e8e4d8;border-radius:3px;}
+.frm_err .txt {border-color:#db1515;-webkit-box-shadow: 0 0 3px rgba(255,0,0,.6); -moz-box-shadow: 0 0 3px rgba(255,0,0,.6); box-shadow: 0 0 3px rgba(255,0,0,.6);} 
+.txt {height:19px;outline:none;line-height:19px!important;padding:3px 4px 2px;border:1px solid #e8e4d8;border-radius:3px;}
 .btn {position: relative;overflow:visible;width:auto;-moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; text-indent: 0; outline: 0;border: 0;display: inline-block; height: 29px; line-height: 29px; line-height: 32px\9; padding: 0 21px; font-size: 12px; text-align: center; vertical-align: middle; white-space: nowrap; background: #25ab5e; color: #fff; cursor: pointer; border-radius: 3px; text-shadow: 0 1px 1px rgba(0,0,0,.15); -webkit-transition: all 0.2s; transition: all 0.2s;}
 .btn:hover {text-decoration: none; background: #2CC36C;}
+.btn_pending, .btn_disable {color: #fff!important; background: #CBCBCB!important; cursor: default; text-shadow: none!important; } .btn_pending {color: transparent!important;}
+.btn_pending:after {content: ''; left: 0; top: 0; position: absolute; display: block; width: 100%; height: 100%; background: url(//s2.ksyun.com/i/2/134.gif) no-repeat center; }
 .btn:active {background: #455469; }
 
 .pre {border-top:1px solid #999;}

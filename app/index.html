@@ -5,26 +5,38 @@
 	<title>index</title>
 	<link rel="stylesheet" type="text/css" href="css/g.css">
 	<script type="text/javascript" src="lib/angular-1.2.7/angular.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
-<body ng-app>
+<!-- ng-app的指令 指定一个app的入口 开始 -->
+<!-- 所有的ng-XXX形式的是angular已经内置好的指令 -->
+<body ng-app="app">
 	<div class="header">
 		<p class="logo"><a href='/'>angular example</a></p>
 	</div>
-	<div class="Bdy">
-		<form class="form">
+	<!-- ng-controller指令 指定一个控制器 去控制内容 -->
+	<div class="Bdy" ng-controller="regCtrl">
+		<!-- ng-submit指令 当form submit的时候 去执行里边的表达式函数 -->
+		<form class="form" ng-submit="submit()">
 			<div class="formItem">
+				<!-- ng-model 将value值和scope上的username属性绑定 详见http://docs.angularjs.org/api/ng.directive:ngModel -->
 				<input type="text" class="txt" ng-model="username" placeholder="用户名">
 			</div>
-			<div class="formItem">
-				<input type="password" class="txt" ng-model="password" placeholder="密码">
+			<!-- ng-class 给元素设置class的 可以是
+			{expression}
+			ng-class: {expression} 
+			这里也可以是ng-class="checkErr" 那么checkErr的值就会被加到元素的class上 -->
+			<div class="formItem" ng-class="{frm_err: checkErr}">
+				<!-- ng-change 当input的value值发生变化的实现 执行表达式checkPwd()
+				和input的change事件很像 但是这里更像是input事件 -->
+				<input type="password" class="txt" ng-model="password" ng-change="checkPwdLen()" placeholder="密码">
 			</div>
 			<div class="formItem">
-				<input type="submit" class="btn" value="注册">
+				<button type="submit" class="btn" ng-class="{btn_pending:pending}">注册</buttom>
 			</div>
 		</form>
 		<div class="pre">
 			<p class="preItem">您输入的用户名：<b>{{username}}</b></p>
-			<p class="preItem">您输入的密码：<b>{{password}}</b></p>
+			<p class="preItem">您输入的密码：<b>{{password | limitTo:10}}</b></p>
 		</div>
 	</div>
 </body>
