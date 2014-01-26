@@ -38,6 +38,8 @@ a:hover {text-decoration:underline;}
 .tbl tr.pending td {background-color:#1994AC;}
 .tbl tr.pending a {display:none;}
 
+.tbl tr td:first-child a {padding:0 20px;}
+
 td a {margin-left:5px;}
 
 .opArea {margin-bottom:10px;}
