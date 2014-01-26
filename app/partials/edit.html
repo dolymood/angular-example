@@ -1,0 +1,15 @@
+<div class="modal-header">
+	<h3>编辑窗口</h3>
+</div>
+<div class="modal-body">
+	<div class="iItem">
+		<input type="text" class="txt" ng-model="data.name" ng-disabled="pending" placeholder="name">
+	</div>
+	<div class="iItem">
+		<input type="text" class="txt" ng-model="data.grp" ng-disabled="pending" placeholder="grp">
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" ng-class="{btn_pending:pending}" ng-click="ok()">OK</button>
+	<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>

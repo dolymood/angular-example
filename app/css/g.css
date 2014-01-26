@@ -1,0 +1,148 @@
+* {margin:0;padding:0}
+html {font:12px/1.667 'Helvetica Neue',Tahoma;color:#455469;background-color:whitesmoke}
+.header {height:40px;line-height:40px;background-color:#25AB5E;color:#fff;}
+.logo {margin-left:20px;color:#fff;}
+.logo a {color:#fff;font-size:16px;}
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+.form {border: 1px solid #ccc; width: 350px;margin: 20px auto;} 
+.formItem {margin:15px;width:200px;padding:10px;margin:auto;}
+.frm_err .txt {border-color:#db1515;-webkit-box-shadow: 0 0 3px rgba(255,0,0,.6); -moz-box-shadow: 0 0 3px rgba(255,0,0,.6); box-shadow: 0 0 3px rgba(255,0,0,.6);} 
+.txt {height:19px;outline:none;line-height:19px!important;padding:3px 4px 2px;border:1px solid #e8e4d8;border-radius:3px;}
+.btn {position: relative;overflow:visible;width:auto;-moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; text-indent: 0; outline: 0;border: 0;display: inline-block; height: 29px; line-height: 29px; line-height: 32px\9; padding: 0 21px; font-size: 12px; text-align: center; vertical-align: middle; white-space: nowrap; background: #25ab5e; color: #fff; cursor: pointer; border-radius: 3px; text-shadow: 0 1px 1px rgba(0,0,0,.15); -webkit-transition: all 0.2s; transition: all 0.2s;}
+.btn:hover {text-decoration: none; background: #2CC36C;}
+.btn_pending, .btn_disable {color: #fff!important; background: #CBCBCB!important; cursor: default; text-shadow: none!important; } .btn_pending {color: transparent!important;}
+.btn_pending:after {content: ''; left: 0; top: 0; position: absolute; display: block; width: 100%; height: 100%; background: url(//s2.ksyun.com/i/2/134.gif) no-repeat center; }
+.btn:active {background: #455469; }
+.btn-primary {color: #fff; background-color: #428bca; border-color: #357ebd; }
+.btn-warning {color: #fff; background-color: #f0ad4e; border-color: #eea236; }
+
+.pre {border-top:1px solid #999;}
+.preItem {margin:10px;}
+
+.nav {width:100%}
+.nav li {display:inline-block;width:33.33%;}
+.nav li a {display:block;height:30px;line-height:30px;text-indent:3em;color:#455469;}
+.nav li a:hover {text-decoration:none;background:#5B697C;color:#fff;}
+.nav .active a,
+.nav .active a:hover {cursor:default;background-color:#455469;color:#fff;}
+
+#Bdy {padding:36px;}
+
+.content {margin-top:15px;}
+.tbl {width:100%;table-layout:fixed;border-collapse:collapse;border-spacing:0;}
+.tbl th, .tbl td {text-align:left;text-indent:2em;height:40px;line-height:40px;border-bottom: 1px solid #dee1e4;background-color:#fff;}
+.tbl tr:hover td {background-color:#fcfcfc;}
+.tbl tr.selected td {background-color:#EEEEEE;}
+.tbl tr.pending td {background-color:#1994AC;}
+.tbl tr.pending a {display:none;}
+
+.tbl tr td:first-child a {padding:0 20px;}
+
+td a {margin-left:5px;}
+
+.opArea {margin-bottom:10px;}
+.opArea .txt {vertical-align:middle;}
+.opArea .btn {margin-left:15px;}
+
+.iItem {margin:20px;}
+
+.list-content .iItem:before {content:attr(csstxt)': ';display:inline-block;width:300px;}
+
+/* 模态窗 相关 */
+/* bootstrap 中的样式 */
+.modal-backdrop {
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 1030;
+background-color: #000;
+}
+.fade {
+opacity: 0;
+-webkit-transition: opacity .15s linear;
+transition: opacity .15s linear;
+}
+.fade.in {
+opacity: 1;
+}
+.modal-backdrop.fade {
+opacity: 0;
+filter: alpha(opacity=0);
+}
+.modal-backdrop.in {
+opacity: .5;
+filter: alpha(opacity=50);
+}
+.modal {
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 1040;
+display: none;
+overflow: auto;
+overflow-y: scroll;
+}
+.modal-dialog {
+position: relative;
+z-index: 1050;
+width: auto;
+margin: 10px;
+}
+.modal-dialog {
+width: 600px;
+margin: 30px auto;
+}
+.modal.fade .modal-dialog {
+-webkit-transform: translate(0,-25%);
+-ms-transform: translate(0,-25%);
+transform: translate(0,-25%);
+-webkit-transition: -webkit-transform .3s ease-out;
+-moz-transition: -moz-transform .3s ease-out;
+-o-transition: -o-transform .3s ease-out;
+transition: transform .3s ease-out;
+}
+.modal.in .modal-dialog {
+-webkit-transform: translate(0,0);
+-ms-transform: translate(0,0);
+transform: translate(0,0);
+}
+.modal-content {
+position: relative;
+background-color: #fff;
+border: 1px solid #999;
+border: 1px solid rgba(0,0,0,0.2);
+border-radius: 6px;
+outline: 0;
+-webkit-box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+background-clip: padding-box;
+}
+.modal-content {
+-webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+.modal-header {
+min-height: 16.428571429px;
+padding: 15px;
+border-bottom: 1px solid #e5e5e5;
+}
+.modal-body {
+position: relative;
+padding: 20px;
+}
+.modal-footer {
+padding: 19px 20px 20px;
+margin-top: 15px;
+text-align: right;
+border-top: 1px solid #e5e5e5;
+}
+.modal-footer .btn+.btn {
+margin-bottom: 0;
+margin-left: 5px;
+}
