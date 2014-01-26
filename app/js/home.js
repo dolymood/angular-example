@@ -26,6 +26,12 @@ app
 
 		// http://docs.angularjs.org/api/ngRoute.$routeProvider
 		// 配置下route路由 很好理解
+		// route需要配合 ng-view 指令才能正常工作
+		// 在html 可以看到咱们在bdy的元素的子元素div上指定了
+		// ng-view指令
+		// 默认当匹配到指定路由的时候
+		// 就会把路由对应的模板内容插入到ng-view指令所在的
+		// 元素里
 		$routeProvider
 		.when('/', {
 			templateUrl: '../partials/index.html',
