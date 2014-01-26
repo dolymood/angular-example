@@ -42,6 +42,19 @@ homeServers
 				}, 350);
 			},
 
+			updateItem: function(nItem, callback) {
+				// nItem
+				// 模拟请求 
+				$timeout(function() {
+					// 根据成功 或者 失败 掉回调
+					var res = {
+
+					};
+
+					callback(res);
+				}, 350);
+			},
+
 			addItem: function(item, callback) {
 				// 模拟请求add
 				$timeout(function() {

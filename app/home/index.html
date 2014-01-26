@@ -4,10 +4,15 @@
 	<meta charset="UTF-8">
 	<title>home</title>
 	<link rel="stylesheet" type="text/css" href="../css/g.css">
+
 	<script type="text/javascript" src="../lib/angular-1.2.7/angular.js"></script>
 	<script type="text/javascript" src="../lib/angular-1.2.7/angular-route.js"></script>
+	<script type="text/javascript" src="../lib/transition.js"></script>
+	<script type="text/javascript" src="../lib/modal.js"></script>
+
 	<script type="text/javascript" src="../js/home.js"></script>
 	<script type="text/javascript" src="../js/homeServices.js"></script>
+	<script type="text/javascript" src="../js/homeDirectives.js"></script>
 	<script type="text/javascript" src="../js/homeControllers.js"></script>
 	<base href="/me/angular-example/app/home/"></base>
 </head>
@@ -23,5 +28,16 @@
 	<div id="Bdy">
 		<div ng-view></div>
 	</div>
+
+	<script type="text/ng-template" id="template/modal/backdrop.html">
+		<div class="modal-backdrop fade"
+	     ng-class="{in: animate}"
+	     ng-style="{'z-index': 1040 + (index && 1 || 0) + index*10}"></div>
+	</script>
+	<script type="text/ng-template" id="template/modal/window.html">
+		<div tabindex="-1" class="modal fade {{ windowClass }}" ng-class="{in: animate}" ng-style="{'z-index': 1050 + index*10, display: 'block'}" ng-click="close($event)">
+    	<div class="modal-dialog"><div class="modal-content" ng-transclude></div></div>
+		</div>
+	</script>
 </body>
 </html>

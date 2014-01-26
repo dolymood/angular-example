@@ -1,20 +1,21 @@
-// 在很多时候 咱们的数据是需要统一去管理的
-// 有可能这份数据不仅仅是在这个controller中
-// 去使用，尤其是在数据处理比较复杂的情况下
 // 
-// 如果多个controller都去用service去统一管理数据的话
-// 代码量会减很少 相应的bug也会越少
-// 维护就更加方便
-// controller仅仅只需要关注于 控制
-var homeControllers = angular.module('homeControllers', ['homeServers']);
+// 这里改成了依赖指令模块
+// homeDirectives
+// 
+// 指令-》 使得普通的HTML元素 具备更加强大的功能
+// 		可以干什么事情
+// 在咱们的这个示例中呢 就是给编辑操作一个指令rowEdit
+// 一般的咱们的修改都比较复杂
+// 需要弹窗修改的
+//
+var homeControllers = angular.module('homeControllers', ['homeServers' ,'homeDirectives']);
 
 homeControllers
 
 .controller('indexCtl', [
 	'$scope',
-	'$http',
 	'listModel',
-	function($scope, $http, listModel) {
+	function($scope, listModel) {
 		
 		listModel.getItems().success(function(res) {
 			$scope.items = res;
