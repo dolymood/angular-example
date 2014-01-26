@@ -14,12 +14,22 @@ homeControllers
 
 .controller('indexCtl', [
 	'$scope',
+	'$timeout',
 	'listModel',
-	function($scope, listModel) {
+	function($scope, $timeout, listModel) {
 		
-		listModel.getItems().success(function(res) {
-			$scope.items = res;
-		});
+		var items = listModel.getItems();
+		// 保证同一份items
+		if (items.success) {
+			items.success(function() {
+				$timeout(function() {
+					$scope.items = listModel.getItems();
+				});
+			});
+		} else {
+			$scope.items = items;
+		}
+		
 
 		var id = 11;
 		$scope.addNewItem = function() {
@@ -48,6 +58,19 @@ homeControllers
 				$scope.items.splice($scope.items.indexOf(item), 1);
 			});
 		};
+
+	}
+])
+
+.controller('indexDetailCtl', [
+	'$scope',
+	'$route',
+	'listModel',
+	function($scope, $route, listModel) {
+
+		listModel.getDetail($route.current.params.itemId, function(item) {
+			$scope.item = item;
+		});
 
 	}
 ])

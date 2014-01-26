@@ -17,7 +17,7 @@
 				<th>操作
 		<tbody>
 			<tr ng-repeat="item in items | filter:filterName" ng-class="{selected:selected, pending: pending}" ng-click="selected = !selected" ng-if="items.length > 0">
-				<td>{{item.id}}
+				<td><a href="index/{{item.id}}">{{item.id}}</a>
 				<td>{{item.name}}
 				<td>{{item.grp}}
 				<td><a href="javascript:;" ng-click="delItem(item, $scope)">删除</a><a href="javascript:;" row-edit edit-data="item">编辑</a>{{pending ? 'pending...' : ''}}

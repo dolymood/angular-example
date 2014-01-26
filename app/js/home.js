@@ -33,9 +33,13 @@ app
 		// 就会把路由对应的模板内容插入到ng-view指令所在的
 		// 元素里
 		$routeProvider
-		.when('/', {
+		.when('/index', {
 			templateUrl: '../partials/index.html',
 			controller: 'indexCtl'
+		})
+		.when('/index/:itemId', {
+			templateUrl: '../partials/indexDetail.html',
+			controller: 'indexDetailCtl'
 		})
 		.when('/index1', {
 			templateUrl: '../partials/index1.html',
@@ -46,7 +50,7 @@ app
 			controller: 'index2Ctl'
 		})
 		.otherwise({
-			redirectTo: '/'
+			redirectTo: '/index'
 		});
 
 	}
@@ -66,10 +70,15 @@ app
 	'$location',
 	function($rootScope, $location) {
 
-		$rootScope.path = $location.path();
+		var parsePath = function(path) {
+			$rootScope.subPath = path;
+			return path.replace(/^(\/\w+?)(\/\w*)?$/, '$1')
+		};
+
+		$rootScope.path = parsePath($location.path());
 
 		$rootScope.$on('$routeChangeSuccess', function(newVal) {
-			$rootScope.path = $location.path();
+			$rootScope.path = parsePath($location.path());
 		});
 
 	}

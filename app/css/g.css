@@ -46,6 +46,8 @@ td a {margin-left:5px;}
 
 .iItem {margin:20px;}
 
+.list-content .iItem:before {content:attr(csstxt)': ';display:inline-block;width:300px;}
+
 /* 模态窗 相关 */
 /* bootstrap 中的样式 */
 .modal-backdrop {

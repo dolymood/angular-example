@@ -24,10 +24,40 @@ homeServers
 	'$timeout',
 	function($http, $timeout) {
 		
+		var allItems, defer;
+
 		return {
 
 			getItems: function() {
-				return $http.get('../data/index.json');
+				if (allItems) return allItems;
+				if (!defer) {
+					defer = $http.get('../data/index.json');
+					defer.success(function(res) {
+						allItems = res;
+						defer = null;
+					});
+				}
+				
+				return defer;
+			},
+
+			getDetail: function(id, callback) {
+				// 应该是去请求详情的 这里就直接从allItems中取了
+				var isDone = false, that = this;
+				if (allItems) {
+					angular.forEach(allItems, function(item) {
+						if (!isDone && item.id == id) {
+							callback(item);
+							isDone = true;
+						}
+					});
+				} else {
+					this.getItems().success(function() {
+						$timeout(function() {
+							that.getDetail(id, callback);
+						}, 0);
+					});
+				}
 			},
 
 			delItem: function(item, callback) {
