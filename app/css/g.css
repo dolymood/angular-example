@@ -18,3 +18,12 @@ a:hover {text-decoration:underline;}
 
 .pre {border-top:1px solid #999;}
 .preItem {margin:10px;}
+
+.nav {width:100%}
+.nav li {display:inline-block;width:33.33%;}
+.nav li a {display:block;height:30px;line-height:30px;text-indent:3em;color:#455469;}
+.nav li a:hover {text-decoration:none;background:#5B697C;color:#fff;}
+.nav .active a,
+.nav .active a:hover {cursor:default;background-color:#455469;color:#fff;}
+
+#Bdy {padding:36px;}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home</title>
+	<link rel="stylesheet" type="text/css" href="../css/g.css">
+	<script type="text/javascript" src="../lib/angular-1.2.7/angular.js"></script>
+	<script type="text/javascript" src="../lib/angular-1.2.7/angular-route.js"></script>
+	<script type="text/javascript" src="../js/home.js"></script>
+	<script type="text/javascript" src="../js/homeControllers.js"></script>
+	<base href="/me/angular-example/app/home/"></base>
+</head>
+<body ng-app="app">
+	<div class="header">
+		<p class="logo"><a href='/'>angular example</a></p>
+	</div>
+	<ul class="nav">
+		<li ng-class="{active: path == '/'}"><a href="#">index</a>
+		<li ng-class="{active: path == '/index1'}"><a href="index1">index1</a>
+		<li ng-class="{active: path == '/index2'}"><a href="index2">index2</a>
+	</ul>
+	<div id="Bdy">
+		<div ng-view></div>
+	</div>
+</body>
+</html>
