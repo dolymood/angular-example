@@ -7,7 +7,7 @@ Angular example
 > 切换分支即可查看 ls_XXX
 
 ##先看预览图##
-![reg](https://raw.github.com/dolymood/angular-example/master/mdImgs/ref.png)
+![reg](https://raw.github.com/dolymood/angular-example/master/mdImgs/reg.png)
 ![index](https://raw.github.com/dolymood/angular-example/master/mdImgs/index.png)
 ![index-edit](https://raw.github.com/dolymood/angular-example/master/mdImgs/index-edit.png)
 ![index-detail](https://raw.github.com/dolymood/angular-example/master/mdImgs/index-detail.png)
