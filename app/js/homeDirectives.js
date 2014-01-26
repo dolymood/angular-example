@@ -81,8 +81,37 @@ homeDirectives
 		return {
 
 			restrict: 'A',
-			scope: {
-				data: '=editData'
+			scope: { // 独立scope
+				data: '=editData' // 这里用的是= 意味着新创新的独立scope
+													// newScope.data = 已存在的scope的item属性值
+													// 为什么是item呢 因为在标签设置了
+													// edit-data="item"
+													// 
+													// 如果说在标签上写的是data="item"
+													// 那么这个地方直接可以用 data:'='
+													// 
+													// 其他的 如果使用 @ 的话 就是取得属性对应的值
+													// 如果是 & 的话 就是以函数的形式调用
+													// 
+													// eg:
+													// 
+													// outerScope
+													// 
+													// outerScope.outerCallFn = function outerCallFn() {};
+													// 
+													// 使用方式：
+													// <div 指令名 attr="attrs..." callFn="outerCallFn()"></div>
+													// 
+													// 
+													// scope: {
+													// 		attr: '@',
+													// 		callFn: '&'
+													// }
+													// 
+													// 那么在新的独立scope newScope取到的值就是
+													// 
+													// attr => 'attrs...',
+													// callFn => outerCallFn
 			},
 			controller: ['$scope', function($scope) {
 
