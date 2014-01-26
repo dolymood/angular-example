@@ -27,3 +27,15 @@ a:hover {text-decoration:underline;}
 .nav .active a:hover {cursor:default;background-color:#455469;color:#fff;}
 
 #Bdy {padding:36px;}
+
+.content {margin-top:15px;}
+.tbl {width:100%;table-layout:fixed;border-collapse:collapse;border-spacing:0;}
+.tbl th, .tbl td {text-align:left;text-indent:2em;height:40px;line-height:40px;border-bottom: 1px solid #dee1e4;background-color:#fff;}
+.tbl tr:hover td {background-color:#fcfcfc;}
+.tbl tr.selected td {background-color:#EEEEEE;}
+
+td a {margin-left:5px;}
+
+.opArea {margin-bottom:10px;}
+.opArea .txt {vertical-align:middle;}
+.opArea .btn {margin-left:15px;}

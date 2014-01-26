@@ -1,1 +1,28 @@
 <h3>index content</h3>
+<h4>列表展示--增删改查</h4>
+
+<div class="content">
+	<div class="opArea">
+		<input type="text" class="txt" ng-model="newItem">
+		<button type="button" class="btn" ng-click="addNewItem()">增加</button>
+		<input type="text" class="txt" ng-model="filterName" placeholder="(filter)过滤name">
+	</div>
+	
+	<table class="tbl">
+		<thead>
+			<tr>
+				<th>id
+				<th>name
+				<th>grp
+				<th>操作
+		<tbody>
+			<tr ng-repeat="item in items | filter:filterName" ng-class="{selected:selected}" ng-click="selected = !selected" ng-if="items.length > 0">
+				<td>{{item.id}}
+				<td><span ng-hide="isEditing">{{item.name}}</span><input type="text" class="txt" ng-model="item.name" ng- ng-show="isEditing">
+				<td>{{item.grp}}
+				<td><a href="javascript:;" ng-click="delItem(item)">删除</a><a href="javascript:;" ng-click="isEditing=!isEditing">{{isEditing ? '完成' : '编辑'}}</a>
+			<tr ng-if="items.length < 1">
+				<td colspan="4">无结果
+	</table>
+</div>
+
