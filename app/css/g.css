@@ -33,6 +33,8 @@ a:hover {text-decoration:underline;}
 .tbl th, .tbl td {text-align:left;text-indent:2em;height:40px;line-height:40px;border-bottom: 1px solid #dee1e4;background-color:#fff;}
 .tbl tr:hover td {background-color:#fcfcfc;}
 .tbl tr.selected td {background-color:#EEEEEE;}
+.tbl tr.pending td {background-color:#1994AC;}
+.tbl tr.pending a {display:none;}
 
 td a {margin-left:5px;}
 
