@@ -115,7 +115,9 @@ homeDirectives
 			},
 			controller: ['$scope', function($scope) {
 
-				this.handlerClick = function() {
+				this.handlerClick = function(e) {
+					e.stopPropagation();
+					
 					$modal.open({
 						templateUrl: '../partials/edit.html',
 						resolve: {
