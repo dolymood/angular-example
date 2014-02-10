@@ -50,7 +50,7 @@ app.controller('regCtrl', ['$scope', '$timeout', function($scope, $timeout) {
 		$timeout(function() {
 			$scope.pending = false;
 			// 成功 跳转
-			location.href='http://127.0.0.1/me/angular/angular-example/app/home.html';
+			location.href='/me/angular-example/app/home';
 		}, 300)
 	};
 }])
