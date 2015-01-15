@@ -1,8 +1,8 @@
 require.config({
-	baseUrl: '/me/angular-example/app/js',
+	baseUrl: '../../js',
 	paths: {
-		angular: '/me/angular-example/app/lib/angular-1.2.7/angular',
-		angularRoute: '/me/angular-example/app/lib/angular-1.2.7//angular-route'
+		angular: '../../lib/angular-1.2.7/angular',
+		angularRoute: '../../lib/angular-1.2.7/angular-route'
 	},
 	shim: {
 		angular: {
@@ -65,7 +65,7 @@ require(['angular'], function() {
 			$timeout(function() {
 				$scope.pending = false;
 				// 成功 跳转
-				location.href='/me/angular-example/app/home';
+				location.href='../../home';
 			}, 300)
 		};
 	}]);
