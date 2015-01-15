@@ -65,11 +65,11 @@ require(['angular', 'angularRoute', 'home/controllers/appCtl'], function(angular
 			// 就会把路由对应的模板内容插入到ng-view指令所在的
 			// 元素里
 			$routeProvider
-			.when('/index', {
+			.when('/', {
 				templateUrl: '../partials/index.html',
 				controller: 'indexCtl'
 			})
-			.when('/index/:itemId', {
+			.when('/:itemId', {
 				templateUrl: '../partials/indexDetail.html',
 				controller: 'indexDetailCtl'
 			})
