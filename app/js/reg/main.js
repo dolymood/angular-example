@@ -65,7 +65,7 @@ require(['angular'], function() {
 			$timeout(function() {
 				$scope.pending = false;
 				// 成功 跳转
-				location.href='../../home';
+				location.href='home/';
 			}, 300)
 		};
 	}]);
