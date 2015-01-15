@@ -82,7 +82,7 @@ require(['angular', 'angularRoute', 'home/controllers/appCtl'], function(angular
 				controller: 'index2Ctl'
 			})
 			.otherwise({
-				redirectTo: '/index'
+				redirectTo: '/'
 			});
 
 		}
