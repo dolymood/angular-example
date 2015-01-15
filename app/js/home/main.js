@@ -69,10 +69,6 @@ require(['angular', 'angularRoute', 'home/controllers/appCtl'], function(angular
 				templateUrl: '../partials/index.html',
 				controller: 'indexCtl'
 			})
-			.when('/:itemId', {
-				templateUrl: '../partials/indexDetail.html',
-				controller: 'indexDetailCtl'
-			})
 			.when('/index1', {
 				templateUrl: '../partials/index1.html',
 				controller: 'index1Ctl'
@@ -80,6 +76,10 @@ require(['angular', 'angularRoute', 'home/controllers/appCtl'], function(angular
 			.when('/index2', {
 				templateUrl: '../partials/index2.html',
 				controller: 'index2Ctl'
+			})
+			.when('/:itemId', {
+				templateUrl: '../partials/indexDetail.html',
+				controller: 'indexDetailCtl'
 			})
 			.otherwise({
 				redirectTo: '/'
@@ -104,7 +104,11 @@ require(['angular', 'angularRoute', 'home/controllers/appCtl'], function(angular
 
 			var parsePath = function(path) {
 				$rootScope.subPath = path;
-				return path.replace(/^(\/\w+?)(\/\w*)?$/, '$1')
+				path = path.replace(/^(\/\w+?)(\/\w*)?$/, '$1');
+				if (path.match(/^\/\d+$/)) {
+					return '/';
+				}
+				return path;
 			};
 
 			$rootScope.path = parsePath($location.path());
