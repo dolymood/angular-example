@@ -1,10 +1,10 @@
 require.config({
 	baseUrl: 'js',
 	paths: {
-		angular: 'lib/angular-1.2.7/angular',
-		angularRoute: 'lib/angular-1.2.7/angular-route',
-		transition: 'lib/transition',
-		modal: 'lib/modal'
+		angular: '../lib/angular-1.2.7/angular',
+		angularRoute: '../lib/angular-1.2.7/angular-route',
+		transition: '../lib/transition',
+		modal: '../lib/modal'
 	},
 	shim: {
 		angular: {
