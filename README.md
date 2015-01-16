@@ -1,17 +1,26 @@
 angular-example
 ===============
 
-Angular example
+Angular example，一步一步学习angular。
 
 切换分支即可查看整个完成过程 ls_XXX
 
 -----------------------------
 
-## 主要主题：##
-1. 注册页（也意味着登录）-- 见证神奇、基本概念
-2. home页 -- 实战：完成基本路由导航route、创建指令directive、服务service、控制器controller等，加入requireJS（将两者结合使用）
+## 主要涉及内容：
 
-##预览图##
+1. 最基础，首先应该如何跑起来一个应用。
+2. 了解基本概念，可能涉及 `module`, `scope`, `controller`, `service`, `directive`, 表达式 等等。
+3. `directive` 详细介绍怎么样使用，自定义指令时各项代表含义；一些常见内置指令，例如：`ng-model`, `ng-controller`, `ng-include`, `ng-hide`, `ng-show` 等等。实战自定义指令：编辑项指令。
+4. 路由的使用。
+5. 目录结构代码组织。
+6. 和 `require.js` 结合使用。
+
+> 中间过程中会基本实战一些最基础的一些概念，当然，最重要的还是改变思路；不以`jquery`式思路“干活”，一切以数据为中心，再加上模板上的逻辑（其实一般通过ng的指令——`ng-if`, `ng-show`, `ng-switch`等——来做）。
+
+> 所以最开始的时候，最好不要 `jquery`，摒弃 `DOM` 操作，让`angular` 自身去更新`DOM`；其实也就是说：不要在代码中操作`DOM`，仅有的操作`DOM`的地方在指令`directive` 中。后期如果真的是项目需要，可以加上`jquery`。
+
+##预览图
 ![reg](https://raw.github.com/dolymood/angular-example/master/mdImgs/reg.png)
 ![index](https://raw.github.com/dolymood/angular-example/master/mdImgs/index.png)
 ![index-edit](https://raw.github.com/dolymood/angular-example/master/mdImgs/index-edit.png)
