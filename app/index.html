@@ -30,7 +30,7 @@
 				<input type="password" class="txt" ng-model="password" name="password" ng-required ng-minlength="6" ng-maxlength="20" placeholder="密码，6-20个字符">
 			</div>
 			<div class="formItem">
-				<button type="submit" class="btn" ng-class="{btn_pending:pending}">注册</buttom>
+				<button type="submit" class="btn" ng-class="{btn_pending:pending}" ng-disabled="regForm.$invalid">注册</buttom>
 			</div>
 		</form>
 		<div class="pre">
