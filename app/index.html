@@ -35,10 +35,10 @@
 		</form>
 		<div class="pre">
 			<!-- {{}} 插值表达式  -->
-			<p class="preItem">您输入的用户名：<b>{{username}}</b></p>
+			<p class="preItem" ng-cloak>您输入的用户名：<b>{{username}}</b></p>
 			<!-- 表达式中是可以使用管道风格|的过滤器filter的 可以是多个 password|filterA:filterAParams|filterB:filterBParam1:filterBParam2-->
 			<!-- 此处使用的是angular中原生的limitTo 过滤器  -->
-			<p class="preItem">您输入的密码：<b>{{password | limitTo:10}}</b></p>
+			<p class="preItem" ng-cloak>您输入的密码：<b>{{password | limitTo:10}}</b></p>
 		</div>
 	</div>
 </body>

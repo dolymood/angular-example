@@ -50,6 +50,8 @@ td a {margin-left:5px;}
 
 .list-content .iItem:before {content:attr(csstxt)': ';display:inline-block;width:300px;}
 
+[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}
+
 /* 模态窗 相关 */
 /* bootstrap 中的样式 */
 .modal-backdrop {
