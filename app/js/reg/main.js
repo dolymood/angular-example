@@ -45,15 +45,8 @@ require(['angular'], function() {
 	// angular是基于数据驱动的框架，所以说，在咱们的controller中
 	// 只需要去操作数据即可 也就是更改咱们的scope 
 	app.controller('regCtrl', ['$scope', '$timeout', function($scope, $timeout) {
-		$scope.username = '默认的用户名';
+		$scope.username = 'aaa';
 		$scope.password = 'password';
-		$scope.checkPwdLen = function() {
-			if ($scope.password.length > 10) {
-				$scope.checkErr = true;
-			} else {
-				$scope.checkErr = false;
-			}
-		};
 		$scope.submit = function() {
 			if ($scope.checkErr) return;
 			var data = {
