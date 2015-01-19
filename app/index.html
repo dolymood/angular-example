@@ -15,10 +15,10 @@
 	<!-- ng-controller指令 指定一个控制器 去控制内容 -->
 	<div class="Bdy" ng-controller="regCtrl">
 		<!-- ng-submit指令 当form submit的时候 去执行里边的表达式函数 -->
-		<form class="form" name="regForm" ng-submit="submit()">
+		<form class="form" name="regForm" ng-submit="submit()" novalidate>
 			<div class="formItem" ng-class="{frm_err:regForm.username.$dirty && regForm.username.$invalid}">
 				<!-- ng-model 将value值和scope上的username属性绑定 详见http://docs.angularjs.org/api/ng.directive:ngModel -->
-				<input type="text" class="txt" ng-model="username" name="username" placeholder="由字母、数字、下划线组成，以字母开头，3-30个字符" ng-required ng-pattern="/^[A-Za-z]{1}[0-9A-Za-z_]{2,29}$/">
+				<input type="text" class="txt" ng-model="username" name="username" placeholder="由字母、数字、下划线组成，以字母开头，3-30个字符" required ng-pattern="/^[A-Za-z]{1}[0-9A-Za-z_]{2,29}$/">
 			</div>
 			<!-- ng-class 给元素设置class的 可以是
 			{expression}
@@ -27,7 +27,7 @@
 			<div class="formItem" ng-class="{frm_err:regForm.password.$dirty && regForm.password.$invalid}">
 				<!-- ng-change 当input的value值发生变化的实现 执行表达式checkPwd()
 				和input的change事件很像 其实更像是input事件 -->
-				<input type="password" class="txt" ng-model="password" name="password" ng-required ng-minlength="6" ng-maxlength="20" placeholder="密码，6-20个字符">
+				<input type="password" class="txt" ng-model="password" name="password" required ng-minlength="6" ng-maxlength="20" placeholder="密码，6-20个字符">
 			</div>
 			<div class="formItem">
 				<button type="submit" class="btn" ng-class="{btn_pending:pending}" ng-disabled="regForm.$invalid">注册</buttom>
