@@ -28,7 +28,7 @@ a:hover {text-decoration:underline;}
 .nav .active a,
 .nav .active a:hover {cursor:default;background-color:#455469;color:#fff;}
 
-#Bdy {padding:36px;}
+#Bdy {overflow:hidden;position:relative;min-height:600px;}
 
 .content {margin-top:15px;}
 .tbl {width:100%;table-layout:fixed;border-collapse:collapse;border-spacing:0;}
@@ -51,6 +51,13 @@ td a {margin-left:5px;}
 .list-content .iItem:before {content:attr(csstxt)': ';display:inline-block;width:300px;}
 
 [ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}
+
+.view {min-height:100%;margin-top:36px;}
+.view.ng-enter, .view.ng-leave {-webkit-transition:all .3s;transition:all .3s;opacity:1;position:absolute;top:0;left:0;width:100%;}
+.view.ng-enter {opacity:0;left:100%;}
+.view.ng-enter.ng-enter-active {opacity:1;left:0;}
+.view.ng-leave {opacity:1;left:0;}
+.view.ng-leave.ng-leave-active {opacity:0;left:-100%;}
 
 /* 模态窗 相关 */
 /* bootstrap 中的样式 */

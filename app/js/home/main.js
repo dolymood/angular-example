@@ -3,6 +3,7 @@ require.config({
 	paths: {
 		angular: '../lib/angular-1.2.7/angular',
 		angularRoute: '../lib/angular-1.2.7/angular-route',
+		angularAnimate: '../lib/angular-1.2.7/angular-animate',
 		transition: '../lib/transition',
 		modal: '../lib/modal'
 	},
@@ -12,6 +13,11 @@ require.config({
 		},
 
 		angularRoute: {
+			exports: 'angular',
+			deps: ['angular']
+		},
+
+		angularAnimate: {
 			exports: 'angular',
 			deps: ['angular']
 		},
@@ -28,9 +34,9 @@ require.config({
 	}
 });
 
-require(['angular', 'angularRoute', 'home/controllers/appCtl'], function(angular) {
+require(['angular', 'angularRoute', 'angularAnimate', 'home/controllers/appCtl'], function(angular) {
 
-	var app = angular.module('app', ['ngRoute', 'homeControllers']);
+	var app = angular.module('app', ['ngRoute', 'ngAnimate', 'homeControllers']);
 
 	// http://docs.angularjs.org/api/angular.Module
 	// http://docs.angularjs.org/guide/module
